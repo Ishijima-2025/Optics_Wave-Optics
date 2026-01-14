@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-32</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-100</p>
+<p class="X-Large-Bold-RED">フレネル積分の無限大の場合</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>\(\Large   C( \pm \infty) = S(\pm \infty) =\pm \frac{1}{2} \)</p>
+<p>これは複素積分を用いて解くことができるようです（<a href="http://www.ritsumei.ac.jp/~kra/labo/Fresnel.pdf" target="_blank">ここ</a>，<a href="https://batapara.com/archives/fresnel-integral.html/" target="_blank">ここ</a>）</p>
+<p>しかしながら，<a href="https://mathtrain.jp/fresnel" target="_blank">このサイト</a>，では<span class="Large-Bold-Blue">ガウス積分</span>を用いて解いていました．</p>
+<p>このサイトを参考に解いてみました．</p>
+<p>\(\Large    C( \alpha ) =    \displaystyle \int_{0}^{\alpha} \cos \left( \frac{ \pi \ \alpha^2}{2} \right) d \alpha \\<br />
+\Large S( \alpha ) =        \displaystyle \int_{0}^{\alpha} \sin \left( \frac{ \pi \ \alpha^2}{2} \right) d \alpha \)</p>
+<p>ですので，</p>
+<p>\(\Large        \displaystyle \int_{0}^{\infty} Exp \left( i \ \frac{ \pi \ \alpha^2}{2} \right) d \alpha  \)</p>
+<p>を考えていきましょう．<a href="Gaussian-integral-01.html">ガウス積分</a>は，</p>
+<p>\(\Large        \displaystyle \int_{- \infty}^{\infty} e^{ - k x^2} dx = \sqrt{ \frac{\pi}{k}} \)</p>
+<p>です．解き方は，<a href="Gaussian-integral-01.html">ここ</a>，を参考にしてください．</p>
+<p>積分内は偶感数なので，</p>
+<p>\(\Large        \displaystyle \int_{0}^{\infty} e^{ - k x^2} dx = \frac{1}{2} \sqrt{ \frac{\pi}{k}} \\<br />
+\Large \displaystyle \int_{- \infty}^{0} e^{ - k x^2} dx = \frac{1}{2} \sqrt{ \frac{\pi}{k}} \)</p>
+<p>ですので，</p>
+<p>\(\Large        \displaystyle \int_{0}^{- \infty} e^{ - k x^2} dx = - \frac{1}{2} \sqrt{ \frac{\pi}{k}}  \)</p>
+<p>従って，</p>
+<p>\(\Large        \displaystyle \int_{0}^{ \pm \infty} e^{ - k x^2} dx = \pm \frac{1}{2} \sqrt{ \frac{\pi}{k}}  \)</p>
+<p>となります．</p>
+<p>\(\Large k = - \frac{i \ \pi}{2}  \)</p>
+<p>とすると，</p>
+<p>\(\Large        \displaystyle \int_{0}^{ \pm \infty} Exp \left( i \ \frac{ \pi \ \alpha^2}{2} \right) d \alpha = \pm \frac{1}{2} \sqrt{2 \ i} \)</p>
+<p>となります．</p>
+<p>ここで，</p>
+<p>\(\Large ( 1+i)^2 = 1 + 2i -1 = 2i  \)</p>
+<p>なので，</p>
+<p>\(\Large        \begin{eqnarray}　\displaystyle \int_{0}^{ \pm \infty} Exp \left( i \ \frac{ \pi \ \alpha^2}{2} \right) d \alpha <br />
+  &amp;=&amp; \pm \frac{1}{2} \sqrt{2 \ i} \\<br />
+  &amp;=&amp; 
+  \pm \frac{1}{2} \sqrt{ ( 1+i)^2} \\
+  <br />
+&amp;=&amp; 
+  \pm \frac{1}{2} (1+ i )\\<br />
+\end{eqnarray}　\)  </p>
+<p>となりますので，</p>
+<p>\(\Large   C( \pm \infty) = S(\pm \infty) =\pm \frac{1}{2} \)</p>
+<p>となります．<br />
+</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

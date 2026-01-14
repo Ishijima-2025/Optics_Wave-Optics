@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-01</title>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-01</p>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">二重スリットの回折</span></p>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p>高校時代に習った，<span class="Large-Bold-Blue">ヤングの実験</span>，ここから光の回折現象を理解していきましょう．</p>
+<p><img src="Diffraction-01.jpg" width="673" height="336" /></p>
+<p>左の縦線部分に，A，Bのスリットが開いています．<br />
+ここから右側に発せられた光は波のように広がり，お互いに干渉します．</p>
+<p>スクリーン上のP点（原点からｘだけ離れた場所）に到達する各光線，rAP，rBP，においてちょうど波長分の光路差がある場合，干渉は一番強くなり，P点に輝点（輝線？）が生じます．</p>
+<p class="Large-Bold-Blue">近似１</p>
+<p>これらの光路差は，</p>
+<p>\(\Large | r_{AP} - r_{B} | = \sqrt{ L^2 + ( x + \frac{d}{2} )^2} -  \sqrt{ L^2 + ( x - \frac{d}{2} )^2} \) </p>
+<p>となります．ここで，<br />
+  　ｄ　：　スリットの間隔<br />
+  　L　：　スリットとスクリーンとの間隔<br />
+　ｘ　：　スクリーン上で輝線が現れる位置<br />
+です．</p>
+<p>この光路差が波長と等しくなるので，</p>
+<p>\(\Large \lambda = \sqrt{ L^2 + ( x + \frac{d}{2} )^2} -  \sqrt{ L^2 + ( x - \frac{d}{2} )^2} \)</p>
+<p class="Large-Bold-Blue">近似２</p>
+<p>ここで，<br />
+　L &gt;&gt; d<br />
+とした場合，どうなるでしょう？<br />
+ｄに比べてLが非常に長いので，各光線，rAP，rBP，はほとんど平行になるはずです．<br />
+すると上記の式はもっと簡単になって，</p>
+<p>\(\Large \lambda = d \sin \theta \) </p>
+<p>となります．<br />
+これが高校時代に習った式ですね．</p>
+<p class="Large-Bold-Blue">近似３</p>
+<p>さらに，<br />
+  L &gt;&gt; d, x<br />
+  とした場合，どうなるでしょう？<br />
+  ｄ, x，に比べてLが非常に長いので，</p>
+<p>\(\Large \sin \theta \simeq \tan \theta \)</p>
+<p>となり，上記の式はもっと簡単になって，</p>
+<p>\(\Large \lambda = d \frac{x}{L} \) </p>
+<p>となります．</p>
+<p>ｎ次光</p>
+<p>ちょうど二波長分の光路差がついた場合にまた輝線が現れるので，ｎ次光の場合には，</p>
+<p class="Blue">近似１</p>
+<p>\(\Large n \lambda = \sqrt{ L^2 + ( x + \frac{d}{2} )^2} -  \sqrt{ L^2 + ( x - \frac{d}{2} )^2} \)</p>
+<p class="Blue">近似２</p>
+<p>\(\Large n \lambda = d \sin \theta \)</p>
+<p class="Blue">近似３</p>
+<p>\(\Large n \lambda = d \frac{x}{L} \) </p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>次に，実際にどのようなパターンになっていくかを，近似３を用いて考えていきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

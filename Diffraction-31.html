@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-31</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折光は直線か？-02</p>
+<p class="Large-Bold-Red">ｘ，ｙとｎの関係</p>
+<p>ｘとｎとの関係は，</p>
+<p>\(\Large x = \frac{  (2n+1) \lambda^2}{2 \ d}　\)</p>
+<p>から，</p>
+<p><img src="diffraction-04.png" width="752" height="452" /></p>
+<p>となり，直線状となります．</p>
+<p>ｙに関しては，</p>
+<p>\(\Large    y = \sqrt{- \frac{  (d^2 -   \lambda^2) (d^2 - \lambda^2  ( 2 n +1)^2)}{4 d^2}} 　\)　</p>
+<p>から，</p>
+<p><img src="diffraction-05.png" width="752" height="452" /></p>
+<p>のようになり，ｎが小さい場合には直線から外れますが，ｎが大きくなると直線となることがわかります．</p>
+<p>\(\Large    \begin{eqnarray} y &amp;=&amp; \sqrt{- \frac{  (d^2 -   \lambda^2) (d^2 - \lambda^2  ( 2 n +1)^2)}{4 d^2}} \\<br />
+&amp;\simeq&amp;　\sqrt{ \frac{  (d^2 -   \lambda^2) 4 n^2 \lambda^2}{4 d^2}} \\<br />
+\end{eqnarray}　\)</p>
+<p>となるので，ｎが大きくなると原点を通る直線となります．</p>
+<p>では，傾きはどうなるでしょう？</p>
+<p>\(\Large    \alpha =  \frac{y}{x} 　\)　</p>
+<p>とすれば，</p>
+<p>\(\Large    \begin{eqnarray} \alpha^2 &amp;=&amp;  \frac{y^2}{x^2} \\<br />
+  &amp;=&amp; \frac{  (d^2 -   \lambda^2) 4 n^2 \lambda^2}{4 d^2} \frac{d^2}{n^2 \lambda^2} \\<br />
+  &amp;=&amp; \frac{d^2 - \lambda^2}{\lambda^2} \\
+  <br />
+  \end{eqnarray}　\)</p>
+<p>\(\Large    \alpha =  \frac{\sqrt{d^2 - \lambda^2}}{\lambda} 　\)　</p>
+<p>となります．つまり，下の図のようになります．</p>
+<p><img src="diffraction-03.png" width="586" height="393" /></p>
+<p>ここで，赤直線は，</p>
+<p>\(\Large    \sqrt{ (\sqrt{d^2 - \lambda^2})^2 - {\lambda}^2} = d　\)　</p>
+<p>となるので，</p>
+<p>\(\Large    sin \theta = \frac{\lambda}{d} 　\)　</p>
+<p>\(\Large \lambda = d sin \theta 　\)　</p>
+<p>となり，<a href="Diffraction-01.html">回折で求めた結果</a>と一致します．</p>
+<p>あまり意味のない計算だったかもしれませんが，すっきりしました．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-30.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

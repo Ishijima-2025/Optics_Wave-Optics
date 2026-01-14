@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-32</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-32</p>
+<p class="X-Large-Bold-RED">ナイフエッジからの回折-32</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>次に，<span class="X-Large-Blue">ナイフエッジ</span>からの回折を計算してみましょう．</p>
+<p>この計算は，<br />
+  　<a href="https://www.morikita.co.jp/data/mkj/015441mkj.pdf" target="_blank">光学入門</a><br />
+の本を参考にしました．また，フレネル積分については，<br />
+　<a href="https://mathtrain.jp/fresnel" target="_blank">高校数学の美しい物語</a><br />
+　<a href="http://www.ritsumei.ac.jp/~kra/labo/Fresnel.pdf" target="_blank">フレネル積分の計算</a><br />
+などを参考にしました，ありがとうございます．</p>
+<p class="Large-Bold-Red">一般論</p>
+<p>まずは，適当な形状を通過する光を考えましょう．</p>
+<p><img src="Hecht-06.png" width="720" height="545" alt=""/></p>
+<p>XY平面に任意の形状の穴を設定します．距離Rだけ離れた投影面の任意の座標(x,y)の光強度を求めます．<br />
+今回はｘのみの一次元で考えます．</p>
+<p>　<a href="Diffraction-21.html">微小開口からの回折-21</a></p>
+<p>と同様に考えます（一次元であり，文字が少し変わってきます）</p>
+<p>光の振動数を，ω，とすれば，その波形は，</p>
+<p>\(\Large \sin ( \omega t - phase ) \)</p>
+<p>となります．</p>
+<p>　位相　＝　光路÷波長×2π</p>
+<p>となるので，</p>
+<p>\(\Large phase = \frac{r}{\lambda} \times 2 \pi = k r \)</p>
+<p>となります．ここで，<span class="Blue">ｋ，は波数</span>です．従って，</p>
+<p>\(\Large  \sin ( \omega t - phase ) = \sin ( \omega t - k r )  \)</p>
+<p>  となります．光強度をE0，とすると，投影面での強度は距離zに反比例しますので，任意の開口の一部のエリアｄSからの発せられる光は，</p>
+<p>\(\Large  dE = \frac{E_0}{z} \sin ( \omega t - k r )  ds \)</p>
+<p>となります．指数表示に変換すると，</p>
+<p>\(\Large  dE = \frac{E_0}{z} e^{i ( \omega t - k r )} ds \)</p>
+<p>となります．</p>
+<p>次に，開口の(X, Y)から投影面(x,y)の2点間の距離を求めましょう．<span class="X-Large-Blue"><span class="Large-Blue">ここから少し変わってきます．</span></span>距離ｒは，</p>
+<p>\(\Large  r = \sqrt{ (X-x)^2 + R^2} \)</p>
+<p>となります．少し書き換えて，</p>
+<p>\(\Large  r = R \ \sqrt{ 1 + \frac{(X-x)^2}{R^2}} \)</p>
+<p>となります．これを<a href="http://www.fbs.osaka-u.ac.jp/labs/ishijima/Maclaurin-06.html">展開</a>すると，</p>
+<p>\(\Large  r = R + \frac{1}{2} \frac{(X-x)^2}{R} \)</p>
+<p>と簡単にできます．したがって，開口部で一元で積分すると，</p>
+<p>\(\Large  \begin{eqnarray} u(x) <br />
+  &amp;=&amp; \int_{0}^{\infty} \frac{u_0}{z} e^{i ( \omega t - k (R + \frac{1}{2} \frac{(X-x)^2}{R} )} dx \\ <br />
+  &amp; \fallingdotseq &amp;   \int_{0}^{\infty}  e^{\frac{i \pi}{\lambda R} (X-x)^2} dx \\
+  <br />
+\end{eqnarray}　\)</p>
+<p>となります．下の式への移行は，<br />
+  <span class="Blue-Bold">　定数項を無視した<br />
+  　波数を波長に戻した</span><br />
+です．</p>
+<p>次ページにフレネル積分を導入していきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-23.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-33.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

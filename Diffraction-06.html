@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-05</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-06</p>
+<p class="X-Large-Bold-RED">ｎ個のスリットの回折-指数関数編</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>スリットがｎ個の場合の重ね合わせは，</p>
+<p>\(\Large Y = \displaystyle \sum_{ m = 1 }^{ n } A \ e^{ i ( \alpha + (m-1) \beta)} \)</p>
+<p>を計算すればよいわけです．</p>
+<p>\(\Large \begin{eqnarray} Y &amp;=&amp; A \ e^{ i  \alpha} + A \ e^{ i ( \alpha +  \beta)} + A \ e^{ i ( \alpha +  2\beta)} + \cdots + A \ e^{ i ( \alpha +  (n-1) \beta)} \\ &amp;=&amp; A \ \ e^{ i  \alpha} <br />
+\ \left[ 1+ e^{ i \beta} + e^{2 i \beta} + \cdots +  e^{ (n-1) i \beta}  \right] \end{eqnarray} \) </p>
+<p>となります．このYに，\(\Large  e^{ i\beta} \)，を掛けたものは，</p>
+<p>\(\Large  Y \cdot e^{ i \beta} = A \  e^{ i  \alpha} \ \left[  e^{ i \beta} + e^{2 i \beta} + \cdots +  e^{ n i \beta}  \right] \) </p>
+<p>となるので，この二つの式の差分をとると，</p>
+<p>\(\Large  Y \cdot e^{ i \beta} - Y　= A \  e^{ i  \alpha} \ \left[    e^{ n i \beta}-1  \right]  \) </p>
+<p>となります．従って，</p>
+<p>\(\Large  Y = A \  e^{ i  \alpha} \frac{     e^{ n i \beta}-1  }{e^{i \beta} -1} \) </p>
+<p>となります．式を変形して，</p>
+<p>\(\Large Y = A \ e^{ i \alpha} \frac{e^{ \frac{n i \beta}{2}} \left[ e^{ \frac{n  i \beta}{2}} - e^{ - \frac{n i \beta}{2}} \right]}{e^{ \frac{ i \beta}{2}} \left[ e^{ \frac{  i \beta}{2}} - e^{ - \frac{ i \beta}{2}} \right] } \)</p>
+<p>となります．括弧の中はオイラーの公式により三角関数で表すことができるので，</p>
+<p>\(\Large \begin{eqnarray} Y &amp;=&amp; A \ e^{ i \alpha} \frac{
+  e^{ \frac{n i \beta}{2}} \cdot \sin \frac{n  \beta}{2}}
+{e^{ \frac{ i \beta}{2}} \cdot \sin \frac{  \beta}{2}} \\ &amp;=&amp;  A \ exp \left[ i \left( \alpha + \frac{n-1}{2} \beta \right) \right]  \frac{
+  \sin \frac{n  \beta}{2}}
+{ \sin \frac{  \beta}{2}} \end{eqnarray} \)</p>
+<p>となります．虚数部分に着目すれば，最初の指数部分はsinとなります．従って，<a href="Diffraction-04.html">三角関数</a>の場合と一致します．． さらに，時間項を含むので，振幅はそれ以外となります．従って，</p>
+<p>\(\Large I　\simeq   \left[ \frac{ \sin \left( \frac{n \beta}{2} \right)}{ \sin \frac{ \beta}{2}} \right]^2\) </p>
+<p>となります．図示すると，</p>
+<p><img src="Diffraction-03.jpg" width="600" height="289" /></p>
+<p>となります．図を見るとわかるように，<br />
+　ピークの位置はｎによらず，同じ<br />
+　ｎが増えるとシャープさが増してくる<br />
+　シャープになっても周辺の小さいピークが発生する<br />
+ことがわかります．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-05.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-06.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

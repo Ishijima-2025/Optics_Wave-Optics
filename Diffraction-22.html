@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-22</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">矩形開口からの回折-22</p>
+<p class="Large-Bold-Red">矩形開口</p>
+<p>開口部が四角い場合を考えましょう．</p>
+<p>&nbsp;</p>
+<p><img src="Hecht-05.png" width="760" height="497" alt=""/></p>
+<p>この場合は簡単です，二重積分を別々に計算すればいいのです．</p>
+<p>\(\Large  \begin{eqnarray} E <br />
+  &amp;=&amp; \frac{E_0 e^{i ( \omega t - k  R  )}}{z}  \int_{Aperture}  e^{ ik \frac{(Xx+Yy)}{R}} ds \\ <br />
+  &amp;=&amp;
+   \frac{E_0 e^{i ( \omega t - k  R  )}}{z}  \int_{-a/2}^{a/2}  e^{ik \frac{Xx}{R}} dX \int_{-b/2}^{a/2}  e^{ik \frac{Yy}{R}} dY \\ <br />
+\end{eqnarray}　\)</p>
+<p>となり，この二重積分の部分を計算すればよいのです．</p>
+<p>今回は強度の絶対値は考慮せず形状のみ考えますし，二つの積分は同じなので，</p>
+<p>\(\Large    e^{ik \frac{Xx}{R}} dX \)</p>
+<p>のみの計算でいいことがわかります．</p>
+<p>\(\Large  \begin{eqnarray}   \int_{-a/2}^{a/2}  e^{ik \frac{Xx}{R}} dX <br />
+&amp;=&amp; \frac{R}{iKx} \left[ exp \left[ ik \frac{Xx}{R} \right] \right]_{-a/2}^{a/2} \\<br />
+&amp;=&amp; 
+\frac{R}{iKx} \left[ exp \left[ ik \frac{xa}{2R} \right] - exp \left[- ik \frac{xa}{2R} \right]\right] \\<br />
+\end{eqnarray}　\)</p>
+<p>\(\Large    \alpha \equiv \frac{kax}{2R} \)</p>
+<p>とすれば，</p>
+<p>\(\Large    = a \frac{[exp[i \alpha]-exp[-i \alpha]]}{2 i \alpha} \)</p>
+<p>となります．オイラーの公式より，</p>
+<p>\(\Large    = a \frac{sin \alpha}{\alpha} \)</p>
+<p>となります．同様に，</p>
+<p>\(\Large    \beta \equiv \frac{kby}{2R} \)</p>
+<p>とすれば，</p>
+<p>\(\Large    = b \frac{[exp[i \beta]-exp[-i \beta]]}{2 i \beta} \)</p>
+<p>となり，</p>
+<p>\(\Large    = b \frac{sin \beta}{\beta} \)</p>
+<p>となります．強度は二乗平均となるので，</p>
+<p>\(\Large    I \propto \left( \frac{sin \alpha}{\alpha} \right)^2  \left( \frac{sin \beta}{\beta} \right)^2 \)</p>
+<p>となります．</p>
+<p>この結果は，<a href="Diffraction-12.html">一個のスリットの回折-01</a>の結果と（当然ながら）一致します．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-21.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-23.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

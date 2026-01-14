@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-02</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-02</p>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">二重スリットの回折-三角関数編</span></p>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p>おのおのの光波を関数で表すと，</p>
+<p>\(\Large u_1 =A  \sin \left[ 2 \pi \left( \frac{ t }{ T }  \color{red}{-}  \frac{r_{AP}}{\lambda} \right) \right]  \) </p>
+<p>\(\Large u_2 =A  \sin \left[ 2 \pi \left( \frac{ t }{ T }  \color{red}{-}  \frac{r_{BP}}{\lambda} \right) \right]  \) </p>
+<p>となります．ここで，<br />
+  　t　：　時間<br />
+  　T　：　周期<br />
+　A　：　振幅<br />
+です．</p>
+<p>光路差は，</p>
+<p>\(\Large r_{AP} - r_{BP} = d \sin \theta \)</p>
+<p>となりますが，近似3，を使って，</p>
+<p>\(\Large r_{AP} - r_{BP}  \simeq d \tan \theta \)</p>
+<p>\(\Large \hspace{ 65pt } = \frac{d x}{L} \)</p>
+<p>となります．従って，</p>
+<p>\(\Large u_1 =A  \sin \left[ 2 \pi \left( \frac{ t }{ T }  \color{red}{-}  \frac{r_{AP}}{\lambda} \right) \right]  \) </p>
+<p>\(\Large u_2 =A  \sin \left[ 2 \pi \left( \frac{ t }{ T }  \color{red}{-}  \frac{r_{AP +\frac{d x}{L} }}{\lambda} \right) \right]  \) </p>
+<p>となります．ここで，</p>
+<p>\(\Large \alpha = 2 \pi \left( \frac{ t }{ T }  \color{red}{-}  \frac{r_{AP}}{\lambda} \right)  \) </p>
+<p>\(\Large \beta =  \color{red}{-} 2 \pi \left(  \frac{d x}{\lambda L} \right)  \) </p>
+<p>とすると，</p>
+<p>\(\Large u_1 =A  \sin \alpha  \) </p>
+<p>\(\Large u_2 =A  \sin \left( \alpha + \beta \right)  \) </p>
+<p>と簡単に記述することができます．従って，</p>
+<p>\(\Large u_1 + u_2 =A  \sin \alpha + A  \sin \left( \alpha + \beta \right)  \) </p>
+<p>となります．</p>
+<p>ここで，三角関数の公式，</p>
+<p>\(\Large \sin x + \sin y = 2 \sin \frac{x+y}{2} \cos \frac{x-y}{2}  \) </p>
+<p>を用いると，</p>
+<p>\(\Large u_1 + u_2 =A  \sin \left( \alpha + \beta \right)  \) </p>
+<p>\(\Large \hspace{ 30pt } = 2 A \left[ \sin \frac{2 \alpha + \beta}{2} \cos \frac{ \beta}{2}  \right] \) </p>
+<p>\(\Large \hspace{ 30pt } = 2 A \left[ \sin  2 \pi \left( \frac{ t }{ T }  \color{red}{-}  \frac{r_{AP} + \frac{d x}{2 L}}{\lambda} \right) \cos \left(  \color{red}{-} \frac{ \pi d}{\lambda L} \right) x \right] \) </p>
+<p>となります．</p>
+<p>ここで，最初の&quot;sin&quot;の中身を見ると，時間，t，を含みますので，時間とともに振動し，-1～１の間の値をとりますので振動項となります．</p>
+<p>従って，振幅は次の&quot;cos&quot;のところとなります．<br />
+ここで，振幅の絶対値ではなく，相対変化を見たいので，最初の，2A，は考えなくていいですね．</p>
+<p>強度は振幅の二乗になるので，強度Iは（マイナスは除去可能なので），</p>
+<p>\(\Large I \simeq \left[ \cos \left( \frac{ \pi d}{\lambda L} x \right) \right]^2 \) </p>
+<p>となります．ここで三角関数の公式</p>
+<p>\(\Large \cos^2 \theta  = \frac{1}{2} \left( cos 2 \theta +1  \right) \) </p>
+<p>を使って，</p>
+<p>\(\Large I　\simeq  \frac{1}{2} \left[ \cos \left( \frac{　2 \pi d}{\lambda L} x \right) +1 \right] \) </p>
+<p>となります．ここで，波数，</p>
+<p>\(\Large k = \frac{2 \pi}{\lambda} \)</p>
+<p>を使って，</p>
+<p>\(\Large I　\simeq   \left[ \cos \left( \frac{ k d x }{ L}  \right) +1 \right] \) </p>
+<p>となります．</p>
+<p>つまり，cos関数で，0～1の値の変化となります．</p>
+<p>実際の回折像がこちらです．</p>
+<p><img src="Diffraction-02.jpg" width="600" height="250" /></p>
+<p>これは，<br />
+　d　：　0.2465 mm<br />
+　L　：　49.6 mm<br /> 
+　x　：　0.1288 mm<br />
+という結果です．若干誤差が大きいですが．．．</p>
+<p>次に，三つのスリットから発せられる回折像について，考えていきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

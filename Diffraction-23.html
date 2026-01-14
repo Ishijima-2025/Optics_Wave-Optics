@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-23</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">円形開口からの回折-22</p>
+<p class="Large-Bold-Red">円形開口</p>
+<p>開口部が半径aの円の場合を考えましょう．</p>
+<p><img src="Hecht-03.png" width="769" height="511" /></p>
+<p>この場合はちょっと複雑ですが極座標に変換してに計算すればいいのです．</p>
+<p>\(\Large    X = \rho \ cos \varphi, Y = \rho \ sin \varphi \)</p>
+<p>\(\Large    x = q \ cos \phi, Y = q \ sin \phi \)</p>
+<p>の関係があります．積分における極座標は，</p>
+<p>\(\Large    ds = dx \ dy = \rho \ d \rho \ d \phi \)</p>
+<p>となります（導出方法は<a href="Polar.html">こちら</a>）．従って，</p>
+<p>\(\Large  \begin{eqnarray} E <br />
+  &amp;=&amp; \frac{E_0 e^{i ( \omega t - k  R  )}}{z}  \int_{Aperture}  e^{ ik \frac{(Xx+Yy)}{R}} ds \\ <br />
+  &amp;=&amp;
+\frac{E_0 e^{i ( \omega t - k  R  )}}{z}  \int_{ \rho=0}^{a}  \int_{ \varphi=0}^{2 \pi} exp \left[ i \frac{k \rho q}{R} (cos \ \varphi \ cos \phi + sin \ \varphi sin \ \phi) \right] \rho \ d \rho \ d \varphi \\<br />
+&amp;=&amp; 
+\frac{E_0 e^{i ( \omega t - k  R  )}}{z}  \int_{ \rho=0}^{a}  \int_{ \varphi=0}^{2 \pi} exp \left[ i \frac{k \rho q}{R} cos (\varphi - \phi) \right] \rho \ d \rho \ d \varphi \\<br />
+\end{eqnarray}　\)</p>
+<p>となります．ここでスクリーン上の角度Φは円形なので何でもいいことになります．簡単にΦ=0とすれば，</p>
+<p>\(\Large 
+  \displaystyle \int_{ \rho=0}^{a}  \displaystyle \int_{ \varphi=0}^{2 \pi} exp \left[ i \frac{k \rho q}{R} cos \varphi  \right] \rho \ d \rho \ d \varphi　\)</p>
+<p>を計算すればいいことになります．</p>
+<p>しかしながら，この最初の積分，</p>
+<p>\(\Large 
+\displaystyle \int_{ \varphi=0}^{2 \pi} exp \left[ i \frac{k \rho q}{R} cos \varphi  \right]  \ d \varphi　\)</p>
+<p>は解析的に解けないので，ベッセル関数を使います．</p>
+<p>ベッセル関数は，ここに記載したものの，m=0をつかうと，</p>
+<p>\(\Large 
+J_0 (u) = \frac{1}{2 \pi}   \displaystyle \int_{ 0}^{2 \pi} exp \left[ i  u \ cos \nu  \right] d \nu \)</p>
+<p>ですので，</p>
+<p>\(\Large 
+\displaystyle \int_{ \varphi=0}^{2 \pi} exp \left[ i \frac{k \rho q}{R} cos \varphi  \right]  \ d \varphi　= 2 \pi J_0 \left( \frac{k \rho q}{R} \right) \)</p>
+<p>となります，したがって，</p>
+<p>\(\Large 
+\displaystyle \int_{ \rho=0}^{a}  \displaystyle \int_{ \varphi=0}^{2 \pi} exp \left[ i \frac{k \rho q}{R} cos \varphi  \right] \rho \ d \rho \ d \varphi　= 2 \pi \displaystyle \int_{ \rho=0}^{a}  J_0 \left( \frac{k \rho q}{R} \right) \rho \ d \rho \)</p>
+<p>となります．ここで，ベッセル関数の公式，</p>
+<p>\(\Large 
+u \ J_1 (u)  = \displaystyle \int u \ J_0 (u) du \)</p>
+<p>を使えば，</p>
+<p>\(\Large 
+ \frac{k \rho q}{R} \equiv w \)</p>
+<p>とおいて，</p>
+<p>\(\Large d \rho = \frac{R}{k \rho} d w \)</p>
+<p>となり，積分範囲は，</p>
+<p>\(\Large 
+0 \rightarrow  \rho \rightarrow a\)</p>
+<p>\(\Large 
+0 \rightarrow  w \rightarrow \frac{k a q}{R} \)</p>
+<p>となります．従って，</p>
+<p>\(\Large 
+\begin{eqnarray}  \displaystyle \int_{ \rho=0}^{a}  J_0 \left( \frac{k \rho q}{R} \right) \rho \ d \rho <br />
+&amp;=&amp;   \left( \frac{R}{kq} \right)^2 \displaystyle \int_{ w=0}^{ \frac{kaq}{R}}  J_0 (w) w dw \\<br />
+&amp;=&amp;   \left( \frac{R}{kq} \right)^2 \frac{kaq}{R} J_1 \left( \frac{kaq}{R} \right)  \\<br />
+&amp;=&amp;   \frac{Ra}{kq} J_1 \left( \frac{kaq}{R} \right)  \\<br />
+&amp;=&amp;   a^2 \frac{R}{kaq} J_1 \left( \frac{kaq}{R} \right)  \\<br />
+&amp;=&amp;   a^2  \frac{J_1 \left( \frac{kaq}{R} \right)}{\frac{kaq}{R}}  \\<br />
+\end{eqnarray}　\)</p>
+<p>となります．ここで，</p>
+<p>\(\Large 
+\frac{q}{R} = sin \theta \)</p>
+<p>となるので，</p>
+<p>\(\Large 
+\frac{J_1 \left( \frac{kaq}{R} \right)}{\frac{kaq}{R}}  = \frac{J_1 (ka  \ sin \theta)}{ka  \ sin \theta}　\)</p>
+<p>となり，強度は二乗となるので，</p>
+<p>\(\Large 
+I \propto \left[ \frac{J_1 (ka \ sin \theta)}{ka \ sin \theta}) \right]^2　\)</p>
+<p>となります．これを計算すれば，</p>
+<p><img src="PSF.png" width="561" height="480" /></p>
+<p>のようになります．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-22.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-32.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-21</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-21</p>
+<p class="X-Large-Bold-RED">微小開口からの回折-21</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>次に，微小開口からの回折を計算してみましょう．</p>
+<p>この計算は，</p>
+<p>　<a href="https://www.amazon.co.jp/Optics-International-Pie-Eugene-Hecht/dp/0321188780" target="_blank">Optics: International Edition, Eugene Hecht</a><br /> 
+　<a href="http://xrm.phys.northwestern.edu/research/pdf_papers/chapters/wilson_sheppard_chaps1-5.pdf" target="_blank">Theory and Practice of Scanning Optical Microscopy, Tony Wilson, Colin Sheppard</a><br />
+らの本を参考にしました．また，<a href="http://lasie.ap.eng.osaka-u.ac.jp/ap1g1kat/index_j.html" target="_blank">藤田先生（阪大・工）</a>にもいろいろ教えていただきました，ありがとうございます．</p>
+<p class="Large-Bold-Red">一般論</p>
+<p>まずは，適当な形状を通過する光を考えましょう．</p>
+<p><img src="Hecht-01.png" width="769" height="511" /></p>
+<p>XY平面に任意の形状の穴を設定します．距離Zだけ離れた投影面の任意の座標(x,y)の光強度を求めます．</p>
+<p>光の振動数を，ω，とすれば，その波形は，</p>
+<p>\(\Large \sin ( \omega t - phase ) \)</p>
+<p>となります．</p>
+<p>　位相　＝　光路÷波長×2π</p>
+<p>となるので，</p>
+<p>\(\Large phase = \frac{r}{\lambda} \times 2 \pi = k r \)</p>
+<p>となります．ここで，ｋ，は波数です．従って，</p>
+<p>\(\Large  \sin ( \omega t - phase ) = \sin ( \omega t - k r )  \)</p>
+<p>  となります．光強度をE0，とすると，投影面での強度は距離zに反比例しますので，任意の開口の一部のエリアｄSからの発せられる光は，</p>
+<p>\(\Large  dE = \frac{E_0}{z} \sin ( \omega t - k r )  ds \)</p>
+<p>となります．指数表示に変換すると，</p>
+<p>\(\Large  dE = \frac{E_0}{z} e^{i ( \omega t - k r )} ds \)</p>
+<p>となります．</p>
+<p>次に，開口の(X, Y)から投影面(x,y)の2点間の距離を求めましょう．距離ｒは，</p>
+<p>\(\Large  r = \sqrt{ (X-x)^2 + (Y-y)^2 + z^2} \)</p>
+<p>となります．ここで，開口面の原点から投影面(x,y)の2点間の距離Rは，</p>
+<p>\(\Large  R = \sqrt{x^2 +y^2 +z^2} \)</p>
+<p>となります．したがってｒは，</p>
+<p>\(\Large  r = R \sqrt{ 1+\frac{X^2+Y^2}{R^2}-2 \frac{Xx+Yy}{R^2}} \)</p>
+<p>となります．ここで，距離Rが開口の大きさ，X,Yに比べて非常に大きければ，第二項が無視できますので，</p>
+<p>\(\Large  r = R \sqrt{ 1-2 \frac{Xx+Yy}{R^2}} \)</p>
+<p>となります．これを<a href="http://www.fbs.osaka-u.ac.jp/labs/ishijima/Maclaurin-06.html">展開</a>すると，</p>
+<p>\(\Large  r = R (1- \frac{Xx+Yy}{R^2}) \)</p>
+<p>と簡単にできるので，開口部で積分すると，</p>
+<p>\(\Large  \begin{eqnarray} E <br />
+  &amp;=&amp; \iint_{Aperture} \frac{E_0}{z} e^{i ( \omega t - k  R (1- \frac{Xx+Yy}{R^2}) )} ds \\ <br />
+  &amp;=&amp; \frac{E_0 e^{i ( \omega t - k  R  )}}{z}  \iint_{Aperture}  e^{ ik \frac{(Xx+Yy)}{R}} ds \\
+  <br />
+\end{eqnarray}　\)</p>
+<p>となり，この二重積分の部分を計算すればよいのです．</p>
+<p>では，具体的な開口形状について計算していきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-12.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-22.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-25</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">レンズによる集光-02</p>
+<p class="Large-Bold-Red">レンズのNAとの関係</p>
+<p>今までの議論は，レンズによって集光された光はどのような強度分布を持つかでした．<br />
+次に，ある点から発せられた光の結像が倍率とどう関係するかを考えましょう．</p>
+<p><a href="http://lasie.ap.eng.osaka-u.ac.jp/ap1g1kat/index_j.html" target="_blank">藤田先生（阪大・工）</a>にいろいろ教えていただきました，ありがとうございます．</p>
+<p>ここで，無限遠の光学系を考えます（有限遠系は計算が難しそうなので．．．）</p>
+<p><img src="Hecht-lens-03.png" width="709" height="281" /></p>
+<p>左側が焦点距離，f1，の対物レンズ，右側が焦点距離，R，の結像レンズとなります．<br />
+倍率は，<a href="mugen-06.html">ここ</a>，で記したように，二つのレンズの焦点距離の比となります．</p>
+<p>\(\Large    M = \frac{R}{f_1} \)</p>
+<p>また，焦点距離ではなく角度でも表すことができます（<a href="Sin condition-01.html">ここ</a>を参照）</p>
+<p>\(\Large    M = \frac{sin \ \theta_{out}}{sin \ \theta_{in}} \)</p>
+<p>  先ほど述べたように，結像面での強度分布は，</p>
+<p>\(\Large I\propto \left[ \frac{J_1 (\frac{kaq}{R})}{\frac{kaq}{R}}) \right]^2　\)</p>
+<p>となります．</p>
+<p>次に，結像面の強度分布において，最初に強度が０となる位置を考えましょう．</p>
+<p><img src="Hecht-lens-04.png" width="246" height="241" /></p>
+<p>分解能の定義は，<br />
+　強度分布の最初の0となる位置だけ離れた2点間の距離なので，</p>
+<p><img src="Hecht-lens-05.png" width="457" height="409" /></p>
+<p>つまり，</p>
+<p>\(\Large  \left[ \frac{J_1 (\frac{kaq}{R})}{\frac{kaq}{R}}) \right]^2 = 0　\)</p>
+<p>となる位置，ｑ，なので，</p>
+<p>\(\Large  J_1 (\frac{kaq}{R}) = 0　\)</p>
+<p>を考えればよいのです．</p>
+<p>ベッセル関数においては，</p>
+<p>\(\Large  J_1 (3.83) = 0　\)</p>
+<p>なので，</p>
+<p>\(\Large  \frac{kaq}{R} = 3.83　\)</p>
+<p>となります．波数などを戻して，</p>
+<p>\(\Large  \frac{kaq}{R} = \frac{2 \pi}{\lambda} q \ sin \ \theta_{out} = 3.83　\)</p>
+<p>\(\Large  q_{zero} = 0.61 \frac{\lambda}{ \ sin \ \theta_{out}}　\)</p>
+<p>となります．次に実像との関係を調べていきましょう．</p>
+<p><span class="style7"><a href="Diffraction-24.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-26.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

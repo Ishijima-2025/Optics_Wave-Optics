@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-12</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-12</p>
+<p class="X-Large-Bold-RED">一個のスリットの回折-12</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>光の振動数を，ω，とすれば，その波形は，</p>
+<p>\(\Large \sin ( \omega t - phase ) \)</p>
+<p>となります．</p>
+<p>　位相　＝　光路÷波長×2π</p>
+<p>となるので，</p>
+<p>\(\Large phase = \frac{r}{\lambda} \times 2 \pi = k r \)</p>
+<p>となります．ここで，ｋ，は波数です．従って，</p>
+<p>\(\Large \begin{eqnarray} \sin ( \omega t - phase ) &amp;=&amp; \sin \left[ \omega t - k \left( r_0 - \frac{xx_0}{r_0} \right) \right] \\ <br />
+&amp;=&amp; Im \left[ exp \left\{ i \omega t - ik  \left( r_0 - \frac{xx_0}{r_0} \right) \right\} \right] \\ <br />
+&amp;=&amp; Im \left[ exp \left\{ i (\omega t - kr_0) \right\} \cdot exp \left( ik \frac{xx_0}{r_0} \right)  \right] \\ \end{eqnarray} \)</p>
+<p><br />
+  となります．これを，-d/2～d/2まで積分すればよいので，</p>
+<p>\(\Large  \begin{eqnarray} u  <br />
+&amp;=&amp; Im \left\{ e^{ i (\omega t - kr_0)} \cdot \displaystyle \int_{ -\frac{d}{2} }^{ \frac{d}{2} } exp \left[ ik \frac{xx_0}{r_0} \right]  dx_0 \right \} \\<br />
+&amp;=&amp; Im \left\{ e^{ i (\omega t - kr_0)} \cdot \frac{r_0}{ikx} \left[ exp \left( ik \frac{xx_0}{r_0} \right) \right]_{- \frac{d}{2} }^{ \frac{d}{2}}   \right \} \\ <br />
+&amp;=&amp; Im \left\{ e^{ i (\omega t - kr_0)} \cdot \frac{r_0}{ikx} \left[ exp \left( ik \frac{xd}{2r_0} \right) - exp \left( - ik \frac{xd}{2r_0} \right) \right] \right \} \\ \end{eqnarray} \)</p>
+<p>となります．ここで，</p>
+<p>\(\Large e^{i \theta} - e^{-i \theta} = 2i \sin \theta \)</p>
+<p>なので，</p>
+<p>\(\Large  \begin{eqnarray} u <br />
+&amp;=&amp; Im \left\{ e^{ i (\omega t - kr_0)} \cdot \frac{r_0}{ikx}  2i  \sin \left( \frac{kdx}{2r_0} \right)  \right\} \\ <br />
+&amp;=&amp; \sin (\omega t - kr_0) \cdot \frac{2r_0}{kx}  \sin \left( \frac{kdx}{2r_0} \right)  \\ \end{eqnarray} \)</p>
+<p>となります．最初のsinは振動項となるので，強度はそれ以降となり，</p>
+<p>\(\Large  \begin{eqnarray}  I<br />&amp; \propto  &amp; \left[ \frac{2r_0}{kx}  \sin \left( \frac{kdx}{2r_0} \right)  \right]^2 \\ <br />
+&amp;\propto &amp; \frac{  \sin^2 \left( \frac{kdx}{2r_0} \right)}{\left( \frac{kdx}{2r_0} \right)^2} \\ \end{eqnarray} \)</p>
+<p>となります． では実際にどのような波形になるかを試してみましょう．</p>
+<p><img src="Diffraction-05.jpg" width="400" height="346" /></p>
+<p>このように，<a href="Diffraction-06.html">多重スリットの場合</a>と同様の形状となります．(d=0.5 mm, λ=500 nm, L=10 m)</p>
+<p>今回は<span class="Large-Bold-Red">フラウンフォーファ近似</span>，というかなり大胆な近似を行いましたが，もう少し厳密に計算するとどうなるのでしょう？<br />
+きちんとした式を立てるのが非常に困難なので，Labviewにて数値計算を行ってみました．その結果が下の図です．</p>
+<p><img src="Diffraction-06.jpg" width="515" height="377" /></p>
+<p>このように，細かい強度の変化は近似でつぶれてしまいますが，外観は近似でも適切であることがわかります．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-11.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-21.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

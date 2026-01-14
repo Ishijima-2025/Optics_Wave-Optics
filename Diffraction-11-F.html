@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-11</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-11</p>
+<p class="X-Large-Bold-RED">フレネル近似の妥当性</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>講義中に学生さんから質問がありました．</p>
+<p class="Blue-Bold">テイラー展開がおかしい</p>
+<p>と．．．．それは，</p>
+<p>\(\Large  
+  r = 
+r_0  \sqrt{1+\frac{ -2xx_0 + x_0^2}{r_0^2}} 
+\)</p>
+<p>を<span class="Large-Bold-RED">テイラー展開を使って，</span></p>
+<p>\(\Large \begin{eqnarray} 
+  r &amp;=&amp; r_0  \left[ 1+\frac{1}{2}\frac{ -2xx_0 + x_0^2}{r_0^2} 
+  \right]  \\<br />
+  &amp;=&amp; r_0  \left[ 1-\frac{xx_0}{r_0^2}+\frac{1}{2}\frac{  x_0^2}{r_0^2} 
+  \right] \end{eqnarray} \)</p>
+<p>としたのですが，括弧内はｘではないと．．．．たしかに，<span class="Large-Bold-Blue">(1+g(x))<sup>a</sup></span>，の関数ですね．</p>
+<p>では真面目に解いてみましょう（本来は二次元で計算する必要がありますが簡単のため一次元で（指数にすれば分離できる？））</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Blue">・真面目に展開してみる</p>
+<p>そもそもの式は，</p>
+<p>\(\Large  
+  r^2 = 
+r_0^2-2x \ x_0+x_0^2 
+\)</p>
+<p>でした．ｘの項のみ分離して，</p>
+<p>\(\Large  
+  r^2 = 
+(r_0^2+x_0^2) \left( 1+ \frac{-2x \ x_0}{r_0^2+x_0^2} 
+\right) \)</p>
+<p>\(\Large  
+  r = 
+(r_0^2+x_0^2)^{\frac{1}{2}} \left( 1+ \frac{-2x \ x_0}{r_0^2+x_0^2} 
+\right)^{\frac{1}{2}} \)</p>
+<p>となります．</p>
+<p>\(\Large  
+  \left( 1+nx \right)^a
+\)のテイラー展開は，</p>
+<p>\(\Large  
+  f(x)=\left( 1+nx \right)^a
+\hspace{120pt} f(0)=1\)</p>
+<p>\(\Large  
+  f'(x)=na \left( 1+nx \right)^{a-1}\hspace{85pt} f'(0)=na\)</p>
+<p>\(\Large  
+  f''(x)=n^2a(a-1) \left( 1+nx \right)^{a-2}
+\hspace{33pt} f'(0)=n^2a(a-1)\)</p>
+<p>となりますので，</p>
+<p>\(\Large  
+f(x)\simeq 1+nax +\frac{1}{2} n^2a(a-1)+...\)</p>
+<p>となります，一回微分までとると，</p>
+<p>\(\Large  
+  \begin{eqnarray} r &amp;\simeq&amp; 
+(r_0^2+x_0^2)^{\frac{1}{2}} \left( 1+ \frac{-2x \ x_0}{r_0^2+x_0^2} \frac{1}{2} x
+\right) \\<br />
+&amp;=&amp; (r_0^2+x_0^2)^{\frac{1}{2}} \left( 1- \frac{ x_0}{r_0^2+x_0^2}  x
+\right)<br />
+\end{eqnarray} \)</p>
+<p>ここで，r<sub>0</sub>>>x<sub>0</sub>とすると簡単になり，</p>
+<p>\(\Large  
+   r \simeq r_0 \left( 1- \frac{ x_0}{r_0^2}  x
+\right)\)</p>
+<p>となり，<span class="Red-Bold">フラウンフォーファ近似</span>となります，<span class="Red-Bold">フレネル近似</span>は．．．どこかに行っちゃいました．．．．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Blue">・展開前にフラウンフォーファ近似をおこなう</p>
+<p>これは，<a href="https://www.kinokuniya.co.jp/f/dsg-02-9780133977226" target="_blank">HechtのOptics</a>にも記載がありますが（式10.40あたり），先ほどと同じ式</p>
+<p>\(\Large  
+  \begin{eqnarray} r^2 &amp;=&amp; 
+r_0^2-2x \ x_0+x_0^2 
+\\<br /> 
+&amp;=&amp; r_0^2
+\left(1-2 \frac{x x_0}{r_0^2} + \frac{x_0^2}{r_0^2} \right) \\<br />
+\end{eqnarray} \)</p>
+<p>となり，第三項を無視すると（r<sub>0</sub> >> x<sub>0</sub>なので）</p>
+<p>\(\Large  
+  r = r_0
+\left(1-2 \frac{x x_0}{r_0^2}  \right)^{\frac{1}{2}}  \)</p>
+<p>となります，先ほどと同様のテイラー展開を行うと，</p>
+<p>\(\Large  
+  \begin{eqnarray} r &amp;\simeq&amp;  r_0
+\left(1-2 \frac{x_0}{r_0^2}  \frac{1}{2} x\right)\\<br />
+&amp;=&amp; 
+r_0
+\left(1- \frac{ x_0}{r_0^2}   x\right) \\<br />
+\end{eqnarray} \)</p>
+<p>となり，フラウンフォーファ近似は数学的にきちんとした計算であることがわかります．</p>
+<p>なぜ？？？フレネル近似は．．．ですが，よくわかりません．</p>
+<p><span class="Large-Bold-Blue">(1+X)<sup>a</sup></span>，においてXが関数であろうがなかろうがX&lt;&lt;1であれば問題ないのかもしれません．</p>
+<p>たしかに，</p>
+<p>\(\Large  
+r_0 = 10,  \ x_0 = 0.1, \ x=1  \)とおいて計算すると，</p>
+<table width="275" border="1">
+  <tbody>
+    <tr>
+      <td width="147">厳密解</td>
+      <td width="112">9.990495</td>
+    </tr>
+    <tr>
+      <td>フレネル</td>
+      <td>9.990500</td>
+    </tr>
+    <tr>
+      <td>フラウンフォーファ</td>
+      <td>9.990000</td>
+    </tr>
+  </tbody>
+</table>
+<p>と計算できて，いい感じの近似となっています．</p>
+<p>も少しきちんと光学を勉強せねば．．．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-11.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

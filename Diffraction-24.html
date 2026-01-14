@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-24</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">レンズによる集光-01</p>
+<p class="Large-Bold-Red">レンズ</p>
+<p>レンズによって集光された光はどのような強度分布を持つのでしょう？<br />
+幾何光学では一点に集まると教わってきましたが，レンズのすべての点からの波の重ね合わせを考えると一点のみに集まる，というのは待ちが異な事がわかります．<br />
+今回はその強度分布を考えます．</p>
+<p>まずは，光の波面がどうなるかを考えます．<br />
+今回は凸レンズを考えます．凸レンズは中央が膨らんでいるのですが，波面は逆のカーブとなります．</p>
+<p><img src="Hecht-lens-01.png" width="367" height="301" /></p>
+<p>このことは，<br />
+　<span class="Blue-Bold">一点から発せられた波は同心円となる</span><br />
+ことから理解してもらえるかと思います．<br />
+ですので，以下の図のような面を考えます．</p>
+<p>&nbsp;</p>
+<p><img src="Hecht-lens-02.png" width="769" height="503" /></p>
+<p>ここで，重要な点は，<br />
+  <span class="Blue-Bold">　開口部がレンズなので，結像面中心からはどのレンズの位置から発せられる波の距離はRとなる</span><br />
+ことです．なので，<br />
+<span class="Blue-Bold">　中心部はすべての波の位相がそろうので強度が強くなる</span><br />
+のです．</p>
+<p>レンズの任意の位置，（X,Y)，から軸に平行な光の結像面までの距離，r<sub>0</sub>，は，</p>
+<p>\(\Large    r_0^2 = R^2 - ( X^2 + Y^2 ) \)</p>
+<p>となります．ですので，結像面上の任意の点，(x, y)との距離，r，は，</p>
+<p>\(\Large  \begin{eqnarray} r^2 <br />
+&amp;=&amp; r_0^2 + (x-X)^2 +(y-Y)^2 \\<br />
+&amp;=&amp; 
+R^2 - ( X^2 + Y^2 ) + (x-X)^2 +(y-Y)^2 \\<br /> 
+&amp;=&amp; R^2 +x^2 + y^2 -2 (Xx+Yy) \\
+<br />
+\end{eqnarray}　\)</p>
+<p>\(\Large    r = R \left[ 1+ \frac{x^2 + y^2}{R^2} -2 \frac{Xx + Yy}{R^2} \right]^{1/2} \)</p>
+<p>となります．</p>
+<p>ここで，結像面の中心近傍のみを考えると，x, y &lt;&lt; R，となるので，</p>
+<p>\(\Large    r = R \left[ 1 -2 \frac{Xx + Yy}{R^2} \right]^{1/2} \)</p>
+<p>となり，<a href="Diffraction-21.html">微小開口での計算</a>そのままとなります．<br />
+そこで，後は<a href="Diffraction-23.html">円形開口の計算</a>と同じようにすればよいので，強度は，</p>
+<p>\(\Large 
+\begin{eqnarray} I &amp;\propto&amp; \left[ \frac{J_1 (ka \ sin \theta)}{ka \ sin \theta}) \right]^2　\\<br />
+&amp;=&amp; \left[ \frac{J_1 (\frac{kaq}{R})}{\frac{kaq}{R}}) \right]^2<br />
+\end{eqnarray}　\)　</p>
+<p>となります．これを計算すれば，</p>
+<p><img src="PSF.png" width="561" height="480" /></p>
+<p>のようになり，レンズによる集光においても光は一点に集まらないことがわかります．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-23.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-25.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

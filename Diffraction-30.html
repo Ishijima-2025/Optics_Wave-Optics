@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-30</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折光は直線か？-01</p>
+<p class="Large-Bold-Red">回折光</p>
+<p>一般的な教科書では，2点から発せられた同心円状の波のちょうど重なる点を結んだ線が1次光，2次光．．と言われていますね．</p>
+<p><img src="diffraction-01.png" width="508" height="560" /></p>
+<p>でも．．．これって<span class="Large-Bold-Red">本当に直線なのでしょうか？</span>また，<span class="Large-Bold-Red"><a href="Diffraction-01.html">回折の式</a>，と一致するのでしょうか？</span><br />
+確かめてみましょう！</p>
+<p>それぞれからの波の振幅が一致するには，波長λの波のｎ番目とn+1番目の波が同じ位置に存在することになりますね．</p>
+<p><img src="diffraction-02.png" width="732" height="487" /></p>
+<p>従って，</p>
+<p>\(\Large \begin{eqnarray}    y^2 &amp;=&amp; \{ (n+1) \lambda \}^2 - \left( \frac{d}{2} + x \right)^2 \\<br />
+  &amp;=&amp; (n \lambda)^2 -  \left( \frac{d}{2} - x \right)^2<br />
+  \end{eqnarray}　\)　</p>
+<p>を満たす必要があります．従って，</p>
+<p>\(\Large  \{ (n+1) \lambda \}^2 - \left( \frac{d}{2} + x \right)^2 = (n \lambda)^2 -  \left( \frac{d}{2} - x \right)^2　\)　</p>
+<p>\(\Large  n^2 \lambda + 2n \lambda^2 + \lambda^2 -\frac{d^2}{4} - d \ x - x^2 = n^2 \lambda^2 -\frac{d^2}{4} + d \ x - x^2　\)</p>
+<p>整理すると，　</p>
+<p>\(\Large  (2n+1) \lambda^2 = 2 \ d \ x　\)</p>
+<p>\(\Large x = \frac{  (2n+1) \lambda^2}{2 \ d}　\)</p>
+<p>となります．</p>
+<p>ｙに関しては，右側の三角形から，まずはy<sup>2</sup>を求めてみましょう．</p>
+<p>\(\Large \begin{eqnarray}    y^2 &amp;=&amp; (n \lambda)^2 -  \left( \frac{d}{2} - x \right)^2 \\<br />
+  &amp;=&amp; 
+(n \lambda)^2 -  \left( \frac{d}{2} -  \frac{  (2n+1) \lambda^2}{2 \ d} \right)^2 \\<br />
+&amp;=&amp; (n \lambda)^2 - \left( \frac{d^2}{4} -2 \frac{d}{2} \frac{ (2n+1) \lambda^2}{2 \ d} + \left( \frac{ (2n+1) \lambda^2}{2 \ d} \right)^2 \right) \\<br />
+&amp;=&amp; (n \lambda)^2 - \frac{d^4 - 2 d^2 (2n+1)
+\lambda^2 + (2n+1)^2
+\lambda^4}{4 d^2} \\<br />
+&amp;=&amp;  - \frac{ -4 d^2 n^2 \lambda^2 + d^4 - 2 d^2 (2n+1)
+\lambda^2 + (2n+1)^2
+\lambda^4}{4 d^2} \\<br />
+&amp;=&amp;  - \frac{ -4 d^2 n^2 \lambda^2 + d^4 - 4 d^2n
+\lambda^2 -2 d^2 \lambda^2 + 4 n^2
+\lambda^4 + 4 n \lambda^4 + \lambda^4}{4 d^2} \\<br />
+\end{eqnarray}　\)　</p>
+<p>ここで，\(\Large -2 d^2 \lambda^2　\) を二つに分けて，</p>
+<p>\(\Large \begin{eqnarray}    y^2 &amp;=&amp; - \frac{ d^4 -  d^2  \lambda^2 ( 4 n^2 +4 n +1) - d^2
+\lambda^2 + \lambda^4  ( 4 n^2 +4 n +1) }{4 d^2} \\<br />
+&amp;=&amp; - \frac{ d^4 -  d^2  \lambda^2 (2 n + 1)^2 - d^2
+\lambda^2 + \lambda^4  ( 2 n +1)^2 }{4 d^2} \\<br />
+&amp;=&amp; - \frac{ d^2 (d^2 -   \lambda^2) -  \lambda^2  ( 2 n +1)^2 (d^2 - \lambda^2)}{4 d^2} \\<br />
+&amp;=&amp; - \frac{  (d^2 -   \lambda^2) (d^2 - \lambda^2  ( 2 n +1)^2)}{4 d^2} \\<br />
+\end{eqnarray}　\)　</p>
+<p>となるので，</p>
+<p>\(\Large    y = \sqrt{- \frac{  (d^2 -   \lambda^2) (d^2 - \lambda^2  ( 2 n +1)^2)}{4 d^2}} 　\)　</p>
+<p>となります．</p>
+<p>次に，ｘ，ｙとｎの関係を求めていきましょう．</p>
+<p><span class="style7"><a href="Diffraction-27.html"><img src="L-arrow.png" alt="l" width="57" height="34" border="0" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Diffraction-31.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

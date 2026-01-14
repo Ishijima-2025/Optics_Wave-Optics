@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-11</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-11</p>
+<p class="X-Large-Bold-RED">一個のスリットの回折-01</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>スリットが１個の場合はどうなるのでしょう？<br />
+これも回折現象が起こります．<br />
+一つの開口の各点からの光が干渉し合って，回折現象を起こします．</p>
+<p><img src="Diffraction-04.jpg" width="697" height="310" /></p>
+<p>開口幅，ｄ，の各点から発せられた光の干渉光は，距離Lだけ離れたスクリーン上に投影されます．<br />
+距離ｘの位置のP点での光強度をスリット全域で積分すればよいので，</p>
+<p>\(\Large r = \sqrt{L^2 + (x-x_0)^2} \)</p>
+<p>となります．ここで，</p>
+<p>\(\Large r_0 = \sqrt{L^2 + x^2} \)</p>
+<p>とすると，</p>
+<p>\(\Large \begin{eqnarray} 
+  r &amp;=&amp; \sqrt{L^2 + x^2 - 2xx_0 + x_0^2} \\<br />
+&amp;=&amp; 
+\sqrt{r_0^2 - 2xx_0 + x_0^2} \\<br />&amp;=&amp; 
+r_0  \sqrt{1+\frac{ -2xx_0 + x_0^2}{r_0^2}} 
+ \end{eqnarray}  \)</p>
+<p>となります．ここで，<span class="X-Large-Bold-Blue">(1+x)<sup>a</sup></span><span class="Large-Bold-RED">のテイラー展開を使えば（計算は，<a href="Maclaurin-06.html">ここ</a>），</span></p>
+<p>\(\Large \begin{eqnarray} 
+  r &amp;=&amp; r_0  \left[ 1+\frac{1}{2}\frac{ -2xx_0 + x_0^2}{r_0^2} 
+\right]  \\<br />
+ &amp;=&amp; r_0  \left[ 1-\frac{xx_0}{r_0^2}+\frac{1}{2}\frac{  x_0^2}{r_0^2} 
+\right] \end{eqnarray} \)</p>
+<p>となります，ここまでを，<span class="Large-Bold-Red">フレネル近似</span>，と呼びます．</p>
+<p>さらに，近似を行います．第3項を無視すると，</p>
+<p>\(\Large  
+  r \simeq r_0  \left[ 1-\frac{xx_0}{r_0^2} 
+\right]  \)</p>
+<p>となります，ここまでを，<span class="Large-Bold-Red">フラウンフォーファ近似</span>，と呼びます．</p>
+<p>では，次に積分を行ってみましょう．</p>
+<p><a href="Diffraction-11-F.html">フレネル近似の謎については．．．ここに．．</a></p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-06.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-12.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

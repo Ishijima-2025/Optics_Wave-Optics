@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diffraction-04</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">回折-04</p>
+<p class="X-Large-Bold-RED">ｎ個のスリットの回折-三角関数編</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p>スリットが3つの場合は，</p>
+<p>\(\Large u_1 + u_2 + u_3  = A \sin ( \alpha + \beta ) \cdot \frac{ \sin \left( \frac{3 \beta}{2} \right)}{ \sin \frac{ \beta}{2}} \)</p>
+<p>となるので，ｎこの場合には．．．．</p>
+<p>\(\Large u_1 + u_2 + u_3  = A \sin ( \alpha + \beta ) \cdot \frac{ \sin \left( \frac{n \beta}{2} \right)}{ \sin \frac{ \beta}{2}} \)</p>
+<p>となるような気がしますね．．．確かめてみましょう．</p>
+<p>ｎ個のスリットの場合，</p>
+<p>\(\Large u_n = A \sin [ \alpha + (n-1) \beta ] \)</p>
+<p>となります．</p>
+<p>3個のスリットの場合から考えると，</p>
+<p>\(\Large u_1 + u_2 + u_3  = A \frac{ \cos \left( \alpha - \frac{\beta}{2} \right) - \cos \left( \alpha + \frac{5\beta}{2} \right)}{ 2 \sin \frac{\beta}{2}} \) </p>
+<p>\(\Large u_1 + \cdots + u_n  = A \frac{ \cos \left( \alpha - \frac{\beta}{2} \right) - \cos \left( \alpha + \left( n - \frac{1}{2} \right) \beta \right) }{ 2 \sin \frac{\beta}{2}} \) </p>
+<p>となります．</p>
+<p>前ページと同様に，<br />
+　三角関数の和差　→　三角関数の積<br />
+ですので，ここでまた，三角関数の公式，</p>
+<p>\(\Large \sin W \cdot \sin Y = \frac{1}{2} \left[ \cos ( W -Y) - \cos ( W +Y )  \right] \) </p>
+<p>を用いて，和差を積に直しましょう．</p>
+<p>\(\Large W -Y = \alpha - \frac{\beta}{2} \)</p>
+<p>\(\Large W +Y = \alpha + \left( n -\frac{1}{2} \right) \beta \)</p>
+<p>とすればよいので，</p>
+<p>\(\Large \begin{eqnarray} W &amp;=&amp; \frac{1}{2} \left[ \left( \alpha - \frac{\beta}{2} \right) + \left( \alpha +  \left( \frac{2 n - 1}{2} \right) \right) \beta \right] \\ &amp;=&amp;  \frac{1}{2} \left[ 2 \alpha + \left( \frac{2 n - 2}{2} \right) \beta \right] \\ &amp;=&amp;  \alpha +  \frac{n - 1}{2} \beta  \end{eqnarray} \)</p>
+<p>\(\Large \begin{eqnarray} Y &amp;=&amp; \frac{1}{2} \left[ \left( \alpha +   \left( \frac{2 n - 1}{2} \right) \beta \right) - \left( \alpha - \frac{ \beta}{2} \right) \right] \\ &amp;=&amp;  \frac{1}{2} \left[ \left( \frac{2 n - 1}{2} \right)  \beta + \frac{ \beta}{2} \right] \\ &amp;=&amp;  \frac{1}{2} \frac{2 n}{2} \beta \\ &amp;=&amp; \frac{ \beta}{2} \end{eqnarray} \)</p>
+<p>となります．従って，</p>
+<p>\(\Large  \begin{eqnarray} u_1 + \cdots + u_n  &amp;=&amp; A \frac{ \cos \left( \alpha + \frac{n - 1}{2} \beta - \frac{n}{2} \beta \right) - \cos \left( \alpha + \frac{n - 1}{2} \beta + \frac{n}{2} \beta \right)}{ 2 \sin \frac{\beta}{2}} \\ &amp;=&amp; A \frac{\sin \left( \alpha + \frac{n - 1}{2} \beta \right) \cdot \sin \left(  \frac{n}{2} \beta \right)}{ \sin \frac{ \beta}{2}} \end{eqnarray} \) </p>
+<p>先に述べたように，αには時間項が含まれるので最初の部分が振動項となります．振幅は後者の項となります．従って，強度は，</p>
+<p>\(\Large I　\simeq   \left[ \frac{ \sin \left( \frac{n \beta}{2} \right)}{ \sin \frac{ \beta}{2}} \right]^2\) </p>
+<p>となります．</p>
+<p>なかなか大変でしたね．．．．<br />
+三角関数での計算は複雑になりがちです．</p>
+<p>では，同じ計算を指数で行ったらどうなるのでしょう？</p>
+<p><a href="Euler-08.html">ここ</a>，にあるようにとても計算が楽になります．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Diffraction-03.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Diffraction-05.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
